@@ -30,6 +30,7 @@ python T2_StandardizeImage.py
 ```
 
 # Работа программы:
+![image](https://github.com/user-attachments/assets/6442b1ca-9b4c-41f1-9af0-41fc39f31fb4)
 
 Prompt Sequence
 ---
