@@ -1,0 +1,18 @@
+The e-commerce product page we're writing consists of 15 sections:
+Section 1. Introduction: Product Definition and Key Features
+Section 2. What is the print quality and performance of the [Printer Name]?
+Section 3. Which materials can you use with the [Printer Name]?
+Section 4. What is the build volume of the [Printer Name]?
+Section 5. What printer controls are available on the [Printer Name]?
+Section 6. What connectivity options are available on the [Printer Name]?
+Section 7. What software is offered with the [Printer Name]?
+Section 8. How reliable is the [Printer Name] and what maintenance does it require?
+Section 9. What comes included in the box with [Printer Name]?
+Section 10. What upgrades and accessories are available for the [Printer Name]?
+Section 11. What is the design and build quality of the [Printer Name]?
+Section 12. How much does the [Printer Name] cost?
+Section 13. What support and warranty come with the [Printer Name]?
+Section 14. What are the main applications and use cases for [Printer Name]?
+Section 15. Why buy [Printer Name] at Top 3D Shop?
+STRICTLY RELYING ON THE SOURCES ATTACHED, write the first section "Introduction: Product Definition and Key Features".
+Write an engaging introduction to the [Printer Name], highlighting its standout features that make it unique in the market and target audience.

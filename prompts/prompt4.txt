@@ -1,0 +1,10 @@
+Fact-check the "Introduction: Product Definition and Key Features" content you wrote against the original source materials provided. Present your analysis in a table with these columns:
+1. Claim: The specific statement or assertion made in the content
+2. Source Citation: Which source document (if any) contains information related to this claim
+3. Original Text: The exact text from the source document that relates to the claim
+4. Accuracy Assessment: Evaluate as one of the following:
+- Directly Supported (claim matches source exactly)
+- Partially Supported (claim is an interpretation with some basis in source)
+- Unsupported (claim has no basis in provided sources)
+- Contradicted (sources directly contradict the claim)
+5. Notes: Additional context about the accuracy assessment

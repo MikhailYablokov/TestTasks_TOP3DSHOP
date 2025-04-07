@@ -1,0 +1,10 @@
+Check the "Introduction: Product Definition and Key Features" section you wrote, check the clarity, coherence, and readability by applying the following strategies. Rewrite it, if necessary.
+1. Repeat Named Entities Twice Before Using Attributes:
+1.1. Identify the named entity (e.g., companies, people, places) in the text and repeat it at least twice before referring to it with attributes, synonyms, or pronouns.
+1.2. Avoid using pronouns (e.g., "its," "their") or synonyms until the named entity has been mentioned sufficiently for clarity and emphasis.
+2. Use Anchor Segments to Connect Sentences:
+Identify the main topic or key term in each sentence.
+2.1. Repeat or refer back to key terms or concepts from previous sentences to create logical connections and smooth transitions.
+2.2. Use linking phrases or words (e.g., "for example," "this means," "due to this") to clarify relationships between ideas.
+2.3. Introduce new information gradually, ensuring it builds on the previous sentence while maintaining cohesion.
+DO NOT APPLY THESE RULES TO THE PROS AND CONS LIST.

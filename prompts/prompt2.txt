@@ -1,0 +1,13 @@
+Let's cut the fluff for the "Introduction: Product Definition and Key Features" section you wrote. Introduce more fact-based, technical data.
+Follow these rules:
+1. Replace uncertain or speculative language with confident statements whenever possible. Avoid words or phrases such as might, could, may, possibly, perhaps, imagine, suppose, what if, likely, unlikely, iffy, dubious, questionable, maybe, unclear.
+2. Replace vague quantifiers with specific numbers or measurable quantities. Avoid words like many, a lot of, several, a wide range of, some, a few, numerous, approximately, roughly, about, lots of.
+3. Support general statements with specific examples. Format: [Statement]. For example, [ ], according to [source].
+5. References sources in line with this template: "according to the author from [University/Organization] during the [name of research].".
+6. When mentioning an entity or concept for the first time, include its abbreviation in parentheses to ensure clarity for subsequent references. Avoid using abbreviations without first defining them.
+7. Remove redundant or non-contextual words that do not add value to the sentence while maintaining grammatical accuracy. Avoid these types of phrases:
+Overly formal or redundant phrases: in summary, in conclusion, ultimately, therefore, moreover, furthermore, additionally, basically, essentially, truly.
+Vague expressions: smooth experience, daunting task, fascinating world.
+Buzzwords that add little meaning: navigate, tailored, underpins, unveil, transformative, landscape, realm, quest, solutions, craft, glean, glance, elevate.
+Unnecessary complexity: commence, endeavor, facilitate, pertaining to, subsequent to, in lieu of, notwithstanding.
+8. Write the main section as three paragraphs (do not use lists), only use lists for the Pros and Cons section
