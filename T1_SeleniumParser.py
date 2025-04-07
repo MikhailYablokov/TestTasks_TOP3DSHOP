@@ -5,7 +5,17 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import pandas as pd
 import time
+import logging
 
+# Настройка логирования
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.StreamHandler()  # Вывод в консоль
+    ]
+)
+logger = logging.getLogger(__name__)
 
 class Selectors:
     """Класс с CSS-селекторами для сайта Creality"""
@@ -16,7 +26,6 @@ class Selectors:
     SHIPPING_INFO_ITEMS = ".product-info-item"  # Все элементы с информацией
     SHIPPING_TITLE = ".product-info-item-title span"  # Заголовок внутри элемента
     SHIPPING_CONTENT = ".product-info-item-content span"  # Содержимое даты
-
 
 # Настройка Selenium
 chrome_options = Options()
@@ -37,11 +46,11 @@ for product in products:
         if href and "/products/" in href:
             scanner_links.append(href)
     except Exception as e:
-        print(f"Ошибка при сборе ссылки: {str(e)}")
+        logger.error(f"Ошибка при сборе ссылки: {str(e)}")
 
-print("Найденные ссылки на сканеры:")
+logger.info("Найденные ссылки на сканеры:")
 for link in scanner_links:
-    print(link)
+    logger.info(link)
 
 # Шаг 2: Сбор данных
 scanner_data = []
@@ -71,9 +80,9 @@ for link in scanner_links:
             "Shipping": shipping_info,
             "Link": link
         })
-        print(f"Обработан: {name}")
+        logger.info(f"Обработан товар: Name: {name}, Price: {price}, Shipping: {shipping_info}, Link: {link}")
     except Exception as e:
-        print(f"Ошибка при обработке {link}: {str(e)}")
+        logger.error(f"Ошибка при обработке {link}: {str(e)}")
 
 # Закрытие драйвера
 driver.quit()
@@ -86,7 +95,7 @@ df.to_csv("scanner_details.csv", index=False)
 df.to_excel("scanner_details.xlsx", index=False)
 
 # Форматированный вывод
-print("\nИтоговая таблица:")
+logger.info("\nИтоговая таблица:")
 col_widths = {"Name": 50, "Price": 20, "Shipping": 25, "Link": 70}
 header = (
     f"{'Name':<{col_widths['Name']}} | "
@@ -94,14 +103,14 @@ header = (
     f"{'Shipping':<{col_widths['Shipping']}} | "
     f"{'Link':<{col_widths['Link']}}"
 )
-print("-" * len(header))
-print(header)
-print("-" * len(header))
+logger.info("-" * len(header))
+logger.info(header)
+logger.info("-" * len(header))
 for _, row in df.iterrows():
-    print(
+    logger.info(
         f"{row['Name']:<{col_widths['Name']}} | "
         f"{row['Price']:<{col_widths['Price']}} | "
         f"{row['Shipping']:<{col_widths['Shipping']}} | "
         f"{row['Link']:<{col_widths['Link']}}"
     )
-print("-" * len(header))
+logger.info("-" * len(header))
