@@ -5,7 +5,8 @@ import requests
 from dotenv import load_dotenv
 from urllib.parse import urlparse, parse_qs
 from loguru import logger
-
+from requests.exceptions import HTTPError
+import time
 # Настройка логирования через loguru
 logger.add("script.log", rotation="500 MB", level="INFO")  # Логи будут сохраняться в файл script.log
 
@@ -116,24 +117,30 @@ def load_or_transcribe_audio(slug, youtube_url):
 
 
 # Функция генерации ответа через Together.ai
-def generate_response(context_text, prompt):
-    """Генерирует ответ на основе контекста и промпта через API Together.ai."""
+def generate_response(context_text, prompt, max_retries=3):
     full_prompt = f"Контекст:\n{context_text}\n\n{prompt}"
     data = {
         "model": "mistralai/Mixtral-8x7B-Instruct-v0.1",
         "max_tokens": 500,
         "temperature": 0.7,
         "top_p": 0.9,
-        "messages": [
-            {"role": "user", "content": full_prompt}
-        ]
+        "messages": [{"role": "user", "content": full_prompt}]
     }
-    logger.debug(f"Отправка запроса к Together.ai с промптом длиной {len(full_prompt)} символов")
-    response = requests.post("https://api.together.xyz/v1/chat/completions", headers=HEADERS, json=data)
-    response.raise_for_status()
-    result = response.json()["choices"][0]["message"]["content"]
-    logger.info(f"Ответ от Together.ai получен (длина: {len(result)} символов)")
-    return result
+    for attempt in range(max_retries):
+        try:
+            logger.debug(f"Отправка запроса к Together.ai (попытка {attempt + 1}/{max_retries})")
+            response = requests.post("https://api.together.xyz/v1/chat/completions", headers=HEADERS, json=data)
+            response.raise_for_status()
+            result = response.json()["choices"][0]["message"]["content"]
+            logger.info(f"Ответ от Together.ai получен (длина: {len(result)} символов)")
+            return result
+        except HTTPError as e:
+            if response.status_code == 503 and attempt < max_retries - 1:
+                logger.warning(f"Ошибка 503, повторная попытка через 5 секунд...")
+                time.sleep(5)
+            else:
+                logger.error(f"Не удалось получить ответ после {max_retries} попыток: {e}")
+                raise
 
 
 # Функция обработки видео
