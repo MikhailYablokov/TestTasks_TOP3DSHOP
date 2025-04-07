@@ -39,6 +39,11 @@ Prompt Sequence
 ```bash
 python T3_PromptSequence.py
 ```
+Также необходимо получить API-token together ai. Создать файл .env и вставить строку:
+```
+TOGETHER_API_KEY=<YOUR-API-KEY>
+```
+
 # Работа программы
 
 
