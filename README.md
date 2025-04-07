@@ -18,3 +18,6 @@ pip install -r requirements.txt
 python scraper.py
 ```
 
+Результат работы:
+---
+![image](https://github.com/user-attachments/assets/d252d7d7-69d9-48dc-9182-3fc7b881180c)
