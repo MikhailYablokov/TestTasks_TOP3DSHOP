@@ -46,6 +46,8 @@ TOGETHER_API_KEY=<YOUR-API-KEY>
 ```
 
 # Работа программы
+![image](https://github.com/user-attachments/assets/03bb219e-e9fa-400c-aa6b-6dcdca3bb56f)
+![image](https://github.com/user-attachments/assets/59bb378a-a2cb-4072-9fe8-9bab39e41e1c)
 
 
 
